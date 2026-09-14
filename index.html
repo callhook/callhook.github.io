@@ -25,7 +25,8 @@
         <a href="pages/campaigns.html">Campaigns</a>
         <a href="pages/integrations.html">Integrations</a>
         <a href="pages/production.html">Production</a>
-        <a href="pages/architecture.html">Architecture</a>
+        <a href="pages/troubleshooting.html">Troubleshooting</a>
+    <a href="pages/architecture.html">Architecture</a>
       </div>
     </div>
     
@@ -72,6 +73,7 @@
     <a href="pages/campaigns.html">Campaigns</a>
     <a href="pages/integrations.html">Integrations</a>
     <a href="pages/production.html">Production</a>
+    <a href="pages/troubleshooting.html">Troubleshooting</a>
     <a href="pages/architecture.html">Architecture</a>
   </nav>
 </aside>
@@ -91,11 +93,15 @@
       <span class="badge">self-hosted</span>
       <span class="badge"><b>+</b> goal-driven campaigns</span>
       <span class="badge"><b>8</b> event types</span>
+      <span class="badge"><b>19</b> webhook integrations</span>
       <span class="badge">MCP server</span>
       <span class="badge">MIT</span>
     </div>
     <div class="cta-row">
-      <a class="cta primary" href="pages/install.html">
+      <a class="cta primary" href="https://callhook.onrender.com" target="_blank" rel="noopener">
+        <span>▶ Live demo</span>
+      </a>
+      <a class="cta ghost" href="pages/install.html">
         <span>Install</span>
       </a>
       <a class="cta ghost" href="pages/quickstart.html">
@@ -107,7 +113,8 @@
         <span>GitHub</span>
       </a>
     </div>
-    <pre style="max-width:620px;margin:26px auto 0;text-align:left"><code>$ curl -fsSL https://callhook.github.io/install.sh | bash
+    <pre style="max-width:620px;margin:26px auto 0;text-align:left"><code><span class="cm"># no install needed — the live demo above runs the whole thing.</span>
+$ curl -fsSL https://callhook.github.io/install.sh | bash
 $ ./callhook/callhook_linux_amd64/callhook
 → the war room opens at http://localhost:8080</code></pre>
   </div>
@@ -210,7 +217,7 @@ $ ./callhook/callhook_linux_amd64/callhook
   <p>Fire one webhook per call — or declare a <strong>goal</strong> and let callhook run the waves: <em>"collect 5 payment promises from the overdue list."</em> Waves launch, unanswered customers are requeued, and the campaign <strong>stops the moment the goal is met</strong> — everyone not yet called is skipped, the budget stays unspent. <a href="pages/campaigns.html">See campaigns →</a></p>
 
   <h2 id="integrations">Integrate anything that can POST</h2>
-  <p>Stripe, Shopify, n8n, Zapier, cron + curl — one webhook endpoint with idempotency built in. Structured outcomes POST back; AI agents drive it over MCP; your CRM plugs in via one interface. <a href="pages/integrations.html">Integrations →</a></p>
+  <p>Stripe, Slack, Shopify, GitHub, HubSpot, PagerDuty, AWS SNS + 12 more get native, signature-verified adapters — plus n8n, Zapier, OpenAI/LangChain agent tools and MCP. Or point anything that can POST at the generic endpoint: one webhook, idempotency built in, structured outcomes back. <a href="pages/integrations.html">Integrations →</a></p>
 
   <h2 id="first-event">Fire your first event</h2>
   <pre><code><span class="cm"># start callhook (dry-run: no API key, no real calls, no balance)</span>
